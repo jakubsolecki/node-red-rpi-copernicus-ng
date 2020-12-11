@@ -20,7 +20,7 @@ configuration = {
 
 circuit = TkCircuit(configuration)
 
-topic = "mobrzut/test"
+topic = personal_config["my_topic"]
 device_id = personal_config["my_device"]
 
 pin_map = {}
