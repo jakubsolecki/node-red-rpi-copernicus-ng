@@ -1,5 +1,5 @@
 from VirtualCopernicusNG import TkCircuit
-
+from personal_config import personal_config;
 configuration = {
     "name": "VirtualCopernicus",
     "sheet": "sheet_smarthouse.png",
@@ -20,8 +20,8 @@ configuration = {
 
 circuit = TkCircuit(configuration)
 
-topic = "kraleppa/test"
-device_id = 1
+topic = "mobrzut/test"
+device_id = personal_config["my_device"]
 
 pin_map = {}
 
@@ -59,7 +59,7 @@ def main():
         json_var = json.dumps({"pin": pin, "state": state})
         mqttc.publish(f'{topic}/{device_id}/output', json_var, 0, False)
 
-    mqttc = mqtt.Client("kraleppa_test")
+    mqttc = mqtt.Client(personal_config["my_client"])
     mqttc.on_message = on_message
     mqttc.on_connect = on_connect
 
