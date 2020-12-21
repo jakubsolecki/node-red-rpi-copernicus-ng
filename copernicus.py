@@ -1,5 +1,6 @@
 from VirtualCopernicusNG import TkCircuit
-from personal_config import personal_config;
+from personal_config import personal_config
+
 configuration = {
     "name": "VirtualCopernicus",
     "sheet": "sheet_smarthouse.png",
