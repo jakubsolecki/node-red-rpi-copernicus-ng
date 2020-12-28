@@ -35,18 +35,15 @@ def main():
 
     def init_cmd(client, userdata, msg):
         payload = json.loads(msg.payload)
-        if not payload.keys() >= {"init", "pins"}:
+        print(payload)
+        if not payload.keys() >= {"pins"}:
             print("Error, invalid message")
             return
-        if payload["init"]:
-            for pin_setting in payload["pins"]:
-                if not pin_setting.keys() >= {"pin", "type"}:
-                    print("Error, invalid message")
-                else:
-                    initialize(pin_setting["pin"], pin_setting["type"])
-        else:
-            # todo: idk if we want to support deinitialization of pins
-            pass
+        for pin_setting in payload["pins"]:
+            if not pin_setting.keys() >= {"pin", "type"}:
+                print("Error, invalid message")
+            else:
+                initialize(pin_setting["pin"], pin_setting["type"])
 
     def output_cmd(client, userdata, msg):
         payload = json.loads(msg.payload)
