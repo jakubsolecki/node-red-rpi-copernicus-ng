@@ -8,11 +8,9 @@ pin_map = {}
 
 
 def main():
-    from gpiozero import DigitalInputDevice, DigitalOutputDevice
+    from gpiozero import DigitalInputDevice, DigitalOutputDevice, AngularServo
     import json
     import paho.mqtt.client as mqtt
-    
-    
 
     def init_cmd(client, userdata, msg):
         payload = json.loads(msg.payload)
@@ -28,13 +26,18 @@ def main():
 
     def output_cmd(client, userdata, msg):
         payload = json.loads(msg.payload)
-        if not payload.keys() >= {"pin", "state"}:
-            print("Error, invalid message")
+        print(payload)
+        if payload.keys() >= {"pin", "state"} and payload.keys() >= {"pin", "angle"}:
+            print("Error, invalid messeeage")
             return
-        pin, state = payload["pin"], payload["state"]
+        pin = payload["pin"]
         if pin_map[pin]:
-            pin_map[pin].value = state
-            print("Change state of pin {} to {}".format(pin, state))
+            if type(pin_map[pin]) == AngularServo:
+                if "angle" in payload:
+                    pin_map[pin].angle = payload["angle"]
+            else:
+                pin_map[pin].value = payload["state"]
+                print("Change state of pin {} to {}".format(pin, payload["state"]))
 
     def on_connect(client, userdata, flags, rc):
         print("Connected with result code " + str(rc))
@@ -51,6 +54,9 @@ def main():
             print("Initialized pin {} as {}".format(pin, device_type))
         elif device_type == "DigitalOutput":
             pin_map[pin] = DigitalOutputDevice(pin)
+            print("Initialized pin {} as {}".format(pin, device_type))
+        elif device_type == "AngularServo":
+            pin_map[pin] = AngularServo(pin)
             print("Initialized pin {} as {}".format(pin, device_type))
 
     def on_action(pin, state):
