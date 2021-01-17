@@ -52,13 +52,13 @@ VirtualCopernicusDevice is equipped in:
 </ul>
 
 
-## Building own flows
+## Building custom flows
 
-It's possible to build own flows.
+It's possible to build custom flows.
 1. Choose button 
 2. Assign actions to button
 3. Click deploy
-4. Initialze device again
+4. Initialize  device again
 
 ![](docs/create_flows.gif)
 
