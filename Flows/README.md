@@ -36,7 +36,7 @@ This flow is responsible for setting an appropriate angle of a servo.
 ### Input flows
 #### Button flows
 There are two button flows. 
-`Button 1 is pressed` triggers an action when button 1 is pressed.
-`Button 2 is pressed`  triggers an action when button 2 is pressed
+- `Button 1 is pressed` triggers an action when button 1 is pressed.
+- `Button 2 is pressed`  triggers an action when button 2 is pressed
 
 
