@@ -16,16 +16,6 @@ personal_config = {
 - `my_client` should be unique for each device
 - `my_topic` should be the same for for devices that need to communicate
 
-### Node-RED
-Dowload local Node-RED from website: https://nodered.org/docs/getting-started/local
-
-Run it by typing in terminal `node-red`.
-
-Node-RED is hosted now locally. 
-Default server is `http://127.0.0.1:1880/`
-
-Import `flows.json` from `Flows` directory, deploy the flows on Node-RED. 
-
 ### Virtual Device
 In `virtual_device` directory run `python copernicus.py`
 On Node-RED initialize virtual device by `init` button.
@@ -50,16 +40,5 @@ VirtualCopernicusDevice is equipped in:
     <li>one buzzer on pin 16</li>
     <li>two buttons on pins 11, 12</li>
 </ul>
-
-
-## Building custom flows
-
-It's possible to build custom flows.
-1. Choose button 
-2. Assign actions to button
-3. Click deploy
-4. Initialize  device again
-
-![](docs/create_flows.gif)
 
 
