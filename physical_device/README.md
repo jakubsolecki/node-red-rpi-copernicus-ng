@@ -15,7 +15,7 @@ personal_config = {
 - `my_client` should be unique for each device
 - `my_topic` should be the same for for devices that need to communicate
 
-## System daemon setup
+## System daemon setup (Raspberry Pi OS)
 
 In order to run *copernicus.py* at the system boot You have to create corresponding system service. <br/><br/>
 ***NOTE*** <br/>
