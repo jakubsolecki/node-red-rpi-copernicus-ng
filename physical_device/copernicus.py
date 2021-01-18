@@ -59,6 +59,7 @@ def main():
             pin_map[pin] = AngularServo(pin)
             print("Initialized pin {} as {}".format(pin, device_type))
 
+
     def on_action(pin, state):
         json_var = json.dumps({"pin": pin, "state": state})
         mqttc.publish(f'{topic}/{device_id}/input', json_var, 0, False)
@@ -69,5 +70,6 @@ def main():
     mqttc.loop_forever()
     
     
-thread = Thread(target=main)
-thread.start()
+# thread = Thread(target=main)
+# thread.start()
+main()
