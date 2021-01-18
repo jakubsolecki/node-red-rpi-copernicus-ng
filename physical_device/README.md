@@ -17,9 +17,9 @@ personal_config = {
 
 ## System daemon setup (Raspberry Pi OS)
 
-In order to run *copernicus.py* at the system boot You have to create corresponding system service. <br/><br/>
+In order to run *copernicus.py* at system boot, You have to create corresponding service. <br/><br/>
 ***NOTE*** <br/>
-***It is neccessary to install dependecies form *requirements.txt* globally, using pip3.*** 
+***It is neccessary to install dependencies form *requirements.txt* globally, using pip3.*** 
 
 ### Steps
 
