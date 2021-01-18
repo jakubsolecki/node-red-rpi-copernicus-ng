@@ -17,13 +17,13 @@ personal_config = {
 
 ## System daemon setup
 
-In order to run *copernicus.py* script at the system boot You have to create corresponding system service. <br/><br/>
+In order to run *copernicus.py* at the system boot You have to create corresponding system service. <br/><br/>
 ***NOTE*** <br/>
 ***It is neccessary to install dependecies form *requirements.txt* globally, using pip3.*** 
 
 ### Steps
 
-1.  Create file (using **sudo**) *copernicus.service* in */etc/systemd/system/*. The file should contain following entries:
+1.  Create file (using **sudo**) *copernicus.service* in */etc/systemd/system*. The file should contain following entries:
 ```
 [Unit]
 Description=Copernicus Node-RED plugin
