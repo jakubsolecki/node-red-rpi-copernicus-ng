@@ -22,7 +22,7 @@ Default server is `http://127.0.0.1:1880/`
 
 Import `flows.json` from `Flows` directory, deploy the flows on Node-RED. 
 
-## Building custom flows
+### Building custom flows
 
 It's possible to build custom flows.
 1. Choose button 
