@@ -34,7 +34,7 @@ It's possible to build custom flows.
 
 ## Devices
 
-Both of the devices use flows described in the corresponding [README](./flows/README.md)
+Both of the devices use flows described in the corresponding [README](./Flows/README.md)
 
 ### Physical device
 Usage of physical device is described in the corresponding [README](./physical_device/README.md) 
