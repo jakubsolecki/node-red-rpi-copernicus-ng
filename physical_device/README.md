@@ -48,4 +48,4 @@ If you want to execute it immediately use also ```sudo systemctl start copernciu
 To check service status use ```systemctl status copernicus.service```<br/>
 To get more information use ```journalctl -u copernicus.service```
 <br/>
-It is highly advised to get familiar with mauals for both commands.
+It is highly advised to get familiar with manuals for both commands.
